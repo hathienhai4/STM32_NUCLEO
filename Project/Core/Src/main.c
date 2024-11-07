@@ -60,14 +60,14 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 void test_IO(){
-	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin,
-			HAL_GPIO_ReadPin(B0_GPIO_Port, B0_Pin));
-
-	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin,
-				HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin));
-
-	HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin,
-				HAL_GPIO_ReadPin(B3_GPIO_Port, B3_Pin));
+//	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin,
+//			HAL_GPIO_ReadPin(Bu0_GPIO_Port, B0_Pin));
+//
+//	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin,
+//				HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin));
+//
+//	HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin,
+//				HAL_GPIO_ReadPin(B3_GPIO_Port, B3_Pin));
 }
 /* USER CODE END 0 */
 
@@ -214,7 +214,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 9600;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -258,10 +258,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : B0_Pin A1_Pin B3_Pin */
-  GPIO_InitStruct.Pin = B0_Pin|A1_Pin|B3_Pin;
+  /*Configure GPIO pins : BUTTON4_Pin BUTTON1_Pin BUTTON2_Pin */
+  GPIO_InitStruct.Pin = BUTTON4_Pin|BUTTON1_Pin|BUTTON2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LD2_Pin Buzzer_Pin D7_Pin D2_Pin */
@@ -271,11 +271,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : B4_Pin */
-  GPIO_InitStruct.Pin = B4_Pin;
+  /*Configure GPIO pin : BUTTON3_Pin */
+  GPIO_InitStruct.Pin = BUTTON3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(B4_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(BUTTON3_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : D6_Pin D3_Pin D5_Pin D4_Pin */
   GPIO_InitStruct.Pin = D6_Pin|D3_Pin|D5_Pin|D4_Pin;
