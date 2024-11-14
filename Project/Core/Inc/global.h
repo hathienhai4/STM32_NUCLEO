@@ -10,30 +10,29 @@
 
 #include "software_timer.h"
 #include "button.h"
-#include "display7SEG.h"
 #include "main.h"
-
-#define INIT		1
-#define RED_GREEN	2
-#define RED_YELLOW	3
-#define GREEN_RED	4
-#define YELLOW_RED	5
-#define MOD_RED		6
-#define MOD_AMBER	7
-#define MOD_GREEN	8
-
-#define MAN_RED		16
-#define MAN_GREEN	17
-#define MAN_YELLOW	18
+#include "RYG_LED.h"
+#include <fsm_traffic_light.h>
+#include <scheduler.h>
+#include <LCD16x2.h>
 
 #define TICK 10
+#define INIT 1
+#define MAN_INIT 9
+#define GREEN_RED 2
+#define YEL_RED 3
+#define RED_GREEN 4
+#define RED_YEL 5
+#define MAN_RED 6
+#define MAN_YEL 7
+#define MAN_GREEN 8
+
+
 
 extern int status;
-extern int value;
-extern int value1;
-extern int TIME_RED;
-extern int TIME_YELLOW;
-extern int TIME_GREEN;
-extern int index_led;
+extern int red_time;
+extern int green_time;
+extern int yel_time;
+extern int temp[3];
 
 #endif /* INC_GLOBAL_H_ */

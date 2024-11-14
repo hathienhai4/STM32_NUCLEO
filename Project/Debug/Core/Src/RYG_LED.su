@@ -1,0 +1,3 @@
+RYG_LED.c:9:6:clearLed	8	static
+RYG_LED.c:14:6:displayLed	16	static
+RYG_LED.c:34:6:displayLed2	16	static

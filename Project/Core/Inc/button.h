@@ -16,6 +16,6 @@
 
 int isButtonPressed(int);
 void getKeyInput();
-
+void init_Button();
 #endif /* INC_BUTTON_H_ */
 

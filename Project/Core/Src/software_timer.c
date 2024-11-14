@@ -5,7 +5,7 @@ int timer_counter[MAX_COUNTER];
 int timer_flag[MAX_COUNTER];
 
 void setTimer(int index, int value) {
-	timer_counter[index] = value / TICK;
+	timer_counter[index] = value/TICK;
 	timer_flag[index] = 0;
 }
 

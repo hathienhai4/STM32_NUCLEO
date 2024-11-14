@@ -1,0 +1,2 @@
+fsm_traffic_light.c:14:6:checkTime	4	static
+fsm_traffic_light.c:20:6:fsm_traffic	16	static

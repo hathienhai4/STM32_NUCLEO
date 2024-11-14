@@ -1,8 +1,8 @@
 #include "scheduler.h"
 
 sTasks SCH_tasks_G[SCH_MAX_TASKS];
-uint8_t current_index_task = 0;//qlý các task in array xem empty or full position
-uint32_t global_timer = 0;//biến toàn cục qlý time cho all task
+uint8_t current_index_task = 0;
+uint32_t global_timer = 0;
 
 void SCH_Init(void) {
     current_index_task = 0;

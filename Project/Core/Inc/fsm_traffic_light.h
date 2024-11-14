@@ -10,6 +10,10 @@
 
 #include "global.h"
 
-void fsm_traffic_light_run();
+#define BLINK_TIME 50
+
+
+void fsm_traffic();
+void checkTime();
 
 #endif /* INC_FSM_TRAFFIC_LIGHT_H_ */
