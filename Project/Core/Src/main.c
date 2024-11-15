@@ -94,14 +94,15 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_TIM2_Init();
-//  MX_I2C1_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim2);
   SCH_Init();
+  LCD_Init();
+
 //  for(int i = 0 ; i < NUM_BUTTON; i++){
 //	  init_Button(i);
 //  }
-//  LCD_Init();
 
   /* USER CODE END 2 */
 
@@ -111,6 +112,11 @@ int main(void)
   SCH_Add_Task(getKeyInput, 0, 10);
   SCH_Add_Task(timerRun, 0, 10);
   SCH_Add_Task(fsm_traffic, 0, 10);
+  uint8_t data[] = {0x01,0x02,0x03};
+  HAL_StatusTypeDef status;
+  uint16_t slave_address = 0x3C; // �?ịa chỉ 7-bsit của thiết bị Slave
+
+  status = HAL_I2C_Master_Transmit(&hi2c1, (slave_address << 1), data, sizeof(data), 1000);
   while (1)
   {
 //	  fsm_traffic();
