@@ -1,4 +1,3 @@
-"./Core/Src/LCD16x2.o"
 "./Core/Src/RYG_LED.o"
 "./Core/Src/button.o"
 "./Core/Src/display7SEG.o"

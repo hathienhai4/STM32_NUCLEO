@@ -28,7 +28,7 @@ Core/Src/button.o: ../Core/Src/button.c ../Core/Inc/button.h \
  ../Core/Inc/main.h ../Core/Inc/global.h ../Core/Inc/software_timer.h \
  ../Core/Inc/button.h ../Core/Inc/RYG_LED.h \
  ../Core/Inc/fsm_traffic_light.h ../Core/Inc/global.h \
- ../Core/Inc/scheduler.h ../Core/Inc/LCD16x2.h
+ ../Core/Inc/scheduler.h
 
 ../Core/Inc/button.h:
 
@@ -101,5 +101,3 @@ Core/Src/button.o: ../Core/Src/button.c ../Core/Inc/button.h \
 ../Core/Inc/global.h:
 
 ../Core/Inc/scheduler.h:
-
-../Core/Inc/LCD16x2.h:

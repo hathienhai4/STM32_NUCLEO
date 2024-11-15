@@ -14,7 +14,6 @@
 #include "RYG_LED.h"
 #include <fsm_traffic_light.h>
 #include <scheduler.h>
-#include <LCD16x2.h>
 
 #define TICK 10
 #define INIT 1

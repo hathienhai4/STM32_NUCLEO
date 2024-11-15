@@ -98,12 +98,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim2);
   SCH_Init();
-  LCD_Init();
-
-//  for(int i = 0 ; i < NUM_BUTTON; i++){
-//	  init_Button(i);
-//  }
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -112,24 +106,9 @@ int main(void)
   SCH_Add_Task(getKeyInput, 0, 10);
   SCH_Add_Task(timerRun, 0, 10);
   SCH_Add_Task(fsm_traffic, 0, 10);
-  uint8_t data[] = {0x01,0x02,0x03};
-  HAL_StatusTypeDef status;
-  uint16_t slave_address = 0x3C; // �?ịa chỉ 7-bsit của thiết bị Slave
-
-  status = HAL_I2C_Master_Transmit(&hi2c1, (slave_address << 1), data, sizeof(data), 1000);
   while (1)
   {
-//	  fsm_traffic();
 	  SCH_Dispatch_Tasks();
-//	  LCD_Location(0, 0);
-//	  LCD_Write_String("TRAFFIC1");
-//	  LCD_Location(1, 0);
-//	  LCD_Write_Number(red_time);
-//
-//	  LCD_Location(0, 8);
-//	  LCD_Write_Number(green_time);
-//	  LCD_Location(1, 8);
-//	  LCD_Write_String("TRAFFIC1");
 
     /* USER CODE END WHILE */
 
