@@ -10,6 +10,7 @@ C_SRCS += \
 ../Core/Src/display7SEG.c \
 ../Core/Src/fsm_traffic_light.c \
 ../Core/Src/global.c \
+../Core/Src/i2c-lcd.c \
 ../Core/Src/main.c \
 ../Core/Src/scheduler.c \
 ../Core/Src/software_timer.c \
@@ -25,6 +26,7 @@ OBJS += \
 ./Core/Src/display7SEG.o \
 ./Core/Src/fsm_traffic_light.o \
 ./Core/Src/global.o \
+./Core/Src/i2c-lcd.o \
 ./Core/Src/main.o \
 ./Core/Src/scheduler.o \
 ./Core/Src/software_timer.o \
@@ -40,6 +42,7 @@ C_DEPS += \
 ./Core/Src/display7SEG.d \
 ./Core/Src/fsm_traffic_light.d \
 ./Core/Src/global.d \
+./Core/Src/i2c-lcd.d \
 ./Core/Src/main.d \
 ./Core/Src/scheduler.d \
 ./Core/Src/software_timer.d \
