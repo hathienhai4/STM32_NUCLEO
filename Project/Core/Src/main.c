@@ -62,16 +62,6 @@ static void MX_I2C1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void test_IO(){
-//	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin,
-//			HAL_GPIO_ReadPin(Bu0_GPIO_Port, B0_Pin));
-//
-//	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin,
-//				HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin));
-//
-//	HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin,
-//				HAL_GPIO_ReadPin(B3_GPIO_Port, B3_Pin));
-}
 /* USER CODE END 0 */
 
 /**
@@ -104,14 +94,14 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_TIM2_Init();
-  MX_I2C1_Init();
+//  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim2);
   SCH_Init();
-  for(int i = 0 ; i < NUM_BUTTON; i++){
-	  init_Button(i);
-  }
-  LCD_Init();
+//  for(int i = 0 ; i < NUM_BUTTON; i++){
+//	  init_Button(i);
+//  }
+//  LCD_Init();
 
   /* USER CODE END 2 */
 
@@ -125,15 +115,15 @@ int main(void)
   {
 //	  fsm_traffic();
 	  SCH_Dispatch_Tasks();
-	  LCD_Location(0, 0);
-	  LCD_Write_String("TRAFFIC1");
-	  LCD_Location(1, 0);
-	  LCD_Write_Number(red_time);
-
-	  LCD_Location(0, 8);
-	  LCD_Write_Number(green_time);
-	  LCD_Location(1, 8);
-	  LCD_Write_String("TRAFFIC1");
+//	  LCD_Location(0, 0);
+//	  LCD_Write_String("TRAFFIC1");
+//	  LCD_Location(1, 0);
+//	  LCD_Write_Number(red_time);
+//
+//	  LCD_Location(0, 8);
+//	  LCD_Write_Number(green_time);
+//	  LCD_Location(1, 8);
+//	  LCD_Write_String("TRAFFIC1");
 
     /* USER CODE END WHILE */
 

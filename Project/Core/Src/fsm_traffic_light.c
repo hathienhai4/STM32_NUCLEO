@@ -7,9 +7,6 @@
 
 #include "fsm_traffic_light.h"
 
-//int red_time = 5000;
-//int green_time = 3000;
-//int yel_time = 2000;
 
 void checkTime(){
 	if(red_time != yel_time + green_time){
@@ -65,9 +62,6 @@ void fsm_traffic(){
 			break;
 
 		case MAN_INIT:
-			 for(int i = 0 ; i < NUM_BUTTON; i++){
-				 init_Button(i);
-			 }
 			setTimer(0,BLINK_TIME);
 			status = MAN_RED;
 			clearLed();
