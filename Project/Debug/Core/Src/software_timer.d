@@ -27,8 +27,9 @@ Core/Src/software_timer.o: ../Core/Src/software_timer.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/RYG_LED.h ../Core/Inc/main.h ../Core/Inc/fsm_traffic_light.h \
- ../Core/Inc/global.h ../Core/Inc/scheduler.h
+ ../Core/Inc/RYG_LED.h ../Core/Inc/main.h ../Core/Inc/i2c-lcd.h \
+ ../Core/Inc/fsm_traffic_light.h ../Core/Inc/global.h \
+ ../Core/Inc/scheduler.h
 
 ../Core/Inc/software_timer.h:
 
@@ -95,6 +96,8 @@ Core/Src/software_timer.o: ../Core/Src/software_timer.c \
 ../Core/Inc/RYG_LED.h:
 
 ../Core/Inc/main.h:
+
+../Core/Inc/i2c-lcd.h:
 
 ../Core/Inc/fsm_traffic_light.h:
 

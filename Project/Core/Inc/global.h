@@ -12,8 +12,11 @@
 #include "button.h"
 #include "main.h"
 #include "RYG_LED.h"
+#include "i2c-lcd.h"
 #include <fsm_traffic_light.h>
 #include <scheduler.h>
+#include <stdio.h>
+#include <math.h>
 
 #define TICK 10
 #define INIT 1
@@ -33,5 +36,9 @@ extern int red_time;
 extern int green_time;
 extern int yel_time;
 extern int temp[3];
+
+extern int val1;
+extern int val2;
+extern char str[90];
 
 #endif /* INC_GLOBAL_H_ */

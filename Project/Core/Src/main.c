@@ -23,9 +23,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <global.h>
-#include "i2c-lcd.h"
-#include <stdio.h>
-#include <math.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -35,7 +32,6 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define SLAVE_ADDRESS_LCD 0x4E
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -66,18 +62,7 @@ static void MX_I2C1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void pppp() {
-		char str[16];
-	  uint8_t abc = 1;
-	  uint8_t def = 2;
-	  lcd_clear();
-	  lcd_put_cur(0, 0);
-//	  sprintf(str, "CUR: %ds", abc);
-	  lcd_send_string("Hello World");
-//	  lcd_put_cur(1, 0);
-//	sprintf(str, "ABC: %ds", def);
-//	lcd_send_string(str);
-}
+
 /* USER CODE END 0 */
 
 /**
@@ -124,7 +109,6 @@ int main(void)
   SCH_Add_Task(getKeyInput, 0, 10);
   SCH_Add_Task(timerRun, 0, 10);
   SCH_Add_Task(fsm_traffic, 0, 10);
-  SCH_Add_Task(pppp, 0, 5000);
   while (1)
   {
 	  SCH_Dispatch_Tasks();
