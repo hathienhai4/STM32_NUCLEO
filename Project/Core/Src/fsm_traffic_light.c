@@ -64,6 +64,8 @@ void fsm_traffic(){
 		case MAN_INIT:
 			setTimer(0,BLINK_TIME);
 			status = MAN_RED;
+			init_Button(1);
+			init_Button(2);
 			clearLed();
 			temp[0] = red_time;
 			temp[1] = yel_time;
@@ -77,6 +79,7 @@ void fsm_traffic(){
 			}
 			else if(isButtonPressed(1)){
 				temp[0] += 1000;
+				setTimer(0, BLINK_TIME);
 			}else if(isButtonPressed(2)){
 				red_time = temp[0];
 				setTimer(0, 0);
@@ -99,6 +102,7 @@ void fsm_traffic(){
 				setTimer(0, BLINK_TIME);
 			}else if(isButtonPressed(1)){
 				temp[1] += 1000;
+				setTimer(0, BLINK_TIME);
 			}else if(isButtonPressed(2)){
 				yel_time = temp[1];
 				setTimer(0, 0);
@@ -118,6 +122,7 @@ void fsm_traffic(){
 				status = INIT;
 			}else if(isButtonPressed(1)){
 				temp[2] += 1000;
+				setTimer(0, BLINK_TIME);
 			}else if(isButtonPressed(2)){
 				green_time = temp[2];
 				setTimer(0, 0);
