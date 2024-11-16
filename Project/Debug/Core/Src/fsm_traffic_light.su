@@ -1,3 +1,2 @@
 fsm_traffic_light.c:11:6:checkTime	4	static
-fsm_traffic_light.c:17:6:AUTO_LCD	8	static
-fsm_traffic_light.c:25:6:fsm_traffic	8	static
+fsm_traffic_light.c:21:6:fsm_traffic	8	static

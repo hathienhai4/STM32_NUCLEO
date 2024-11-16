@@ -17,4 +17,4 @@ int val1 = 0;
 int val2 = 0;
 
 char str[90];
-int temp[3];
+int temp[3] = {5000,3000,2000};

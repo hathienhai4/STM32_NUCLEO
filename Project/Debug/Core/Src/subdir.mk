@@ -7,6 +7,7 @@
 C_SRCS += \
 ../Core/Src/RYG_LED.c \
 ../Core/Src/button.c \
+../Core/Src/displayLCD.c \
 ../Core/Src/fsm_traffic_light.c \
 ../Core/Src/global.c \
 ../Core/Src/i2c-lcd.c \
@@ -22,6 +23,7 @@ C_SRCS += \
 OBJS += \
 ./Core/Src/RYG_LED.o \
 ./Core/Src/button.o \
+./Core/Src/displayLCD.o \
 ./Core/Src/fsm_traffic_light.o \
 ./Core/Src/global.o \
 ./Core/Src/i2c-lcd.o \
@@ -37,6 +39,7 @@ OBJS += \
 C_DEPS += \
 ./Core/Src/RYG_LED.d \
 ./Core/Src/button.d \
+./Core/Src/displayLCD.d \
 ./Core/Src/fsm_traffic_light.d \
 ./Core/Src/global.d \
 ./Core/Src/i2c-lcd.d \

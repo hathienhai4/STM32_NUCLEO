@@ -28,7 +28,7 @@ Core/Src/global.o: ../Core/Src/global.c ../Core/Inc/global.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/RYG_LED.h ../Core/Inc/main.h ../Core/Inc/i2c-lcd.h \
  ../Core/Inc/fsm_traffic_light.h ../Core/Inc/global.h \
- ../Core/Inc/scheduler.h
+ ../Core/Inc/scheduler.h ../Core/Inc/displayLCD.h
 
 ../Core/Inc/global.h:
 
@@ -101,3 +101,5 @@ Core/Src/global.o: ../Core/Src/global.c ../Core/Inc/global.h \
 ../Core/Inc/global.h:
 
 ../Core/Inc/scheduler.h:
+
+../Core/Inc/displayLCD.h:

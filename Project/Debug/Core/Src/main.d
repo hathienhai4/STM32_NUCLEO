@@ -28,7 +28,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/global.h ../Core/Inc/software_timer.h ../Core/Inc/button.h \
  ../Core/Inc/main.h ../Core/Inc/RYG_LED.h ../Core/Inc/i2c-lcd.h \
  ../Core/Inc/fsm_traffic_light.h ../Core/Inc/global.h \
- ../Core/Inc/scheduler.h
+ ../Core/Inc/scheduler.h ../Core/Inc/displayLCD.h
 
 ../Core/Inc/main.h:
 
@@ -101,3 +101,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/global.h:
 
 ../Core/Inc/scheduler.h:
+
+../Core/Inc/displayLCD.h:

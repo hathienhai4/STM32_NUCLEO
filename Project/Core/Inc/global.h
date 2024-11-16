@@ -17,6 +17,7 @@
 #include <scheduler.h>
 #include <stdio.h>
 #include <math.h>
+#include <displayLCD.h>
 
 #define TICK 10
 #define INIT 1

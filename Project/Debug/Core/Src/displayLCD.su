@@ -1,0 +1,3 @@
+displayLCD.c:10:6:displayLCD1	40	static
+displayLCD.c:20:6:displayLCD2	40	static
+displayLCD.c:31:6:acp	24	static
