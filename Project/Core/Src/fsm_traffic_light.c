@@ -148,7 +148,7 @@ void fsm_traffic(){
 
 		case MAN_YEL:
 			displayLCD1(3000, "MODE");
-			displayLCD2(temp[1], "AMBER");
+			displayLCD2(temp[2], "AMBER");
 			if(isTimerExpired(0)){
 				HAL_GPIO_TogglePin(D6_GPIO_Port, D6_Pin);
 				HAL_GPIO_TogglePin(D4_GPIO_Port, D4_Pin);
@@ -160,16 +160,16 @@ void fsm_traffic(){
 				clearLed();
 				setTimer(0, BLINK_TIME);
 			}else if(isButtonPressed(1)){
-				temp[1] += 1000;
-				if (temp[1] >= 100000) temp[1] = 1000;
+				temp[2] += 1000;
+				if (temp[2] >= 100000) temp[2] = 1000;
 				setTimer(0, BLINK_TIME);
 			}else if(isButtonPressed(2)){
 				acp();
 				HAL_Delay(500);
 				lcd_clear();
 				displayLCD1(3000, "MODE");
-				displayLCD2(temp[1], "AMBER");
-				yel_time = temp[1];
+				displayLCD2(temp[2], "AMBER");
+				yel_time = temp[2];
 				setTimer(0, 0);
 				displayLed(YEL);
 				displayLed2(YEL);
@@ -184,7 +184,7 @@ void fsm_traffic(){
 
 		case MAN_GREEN:
 			displayLCD1(4000, "MODE");
-			displayLCD2(temp[2], "GREEN");
+			displayLCD2(temp[1], "GREEN");
 			if(isTimerExpired(0)){
 				HAL_GPIO_TogglePin(D5_GPIO_Port, D5_Pin);
 				HAL_GPIO_TogglePin(D3_GPIO_Port, D3_Pin);
@@ -193,15 +193,15 @@ void fsm_traffic(){
 			if(isButtonPressed(0)){
 				status = INIT;
 			}else if(isButtonPressed(1)){
-				temp[2] += 1000;
-				if (temp[2] >= 100000) temp[2] = 1000;
+				temp[1] += 1000;
+				if (temp[1] >= 100000) temp[1] = 1000;
 				setTimer(0, BLINK_TIME);
 			}else if(isButtonPressed(2)){
 				acp();
 				HAL_Delay(500);lcd_clear();
 				displayLCD1(4000, "MODE");
-				displayLCD2(temp[2], "GREEN");
-				green_time = temp[2];
+				displayLCD2(temp[1], "GREEN");
+				green_time = temp[1];
 				setTimer(0, 0);
 				displayLed(GREEN);
 				displayLed2(GREEN);

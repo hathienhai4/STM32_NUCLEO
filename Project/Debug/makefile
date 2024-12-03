@@ -64,8 +64,8 @@ all: main-build
 main-build: PROJECT_NUCLEO.elf secondary-outputs
 
 # Tool invocations
-PROJECT_NUCLEO.elf: $(OBJS) $(USER_OBJS) D:\VXL\VXL_I2C\STM32_PROJECT\Project\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "PROJECT_NUCLEO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\VXL\VXL_I2C\STM32_PROJECT\Project\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PROJECT_NUCLEO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+PROJECT_NUCLEO.elf: $(OBJS) $(USER_OBJS) E:\VXL\PROJECT\Project\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "PROJECT_NUCLEO.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\VXL\PROJECT\Project\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PROJECT_NUCLEO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
